@@ -151,5 +151,10 @@ namespace Cinema.UI.Controllers.ViewControllers
         {
             return View();
         }
+
+        public IActionResult AdminLogin()
+        {
+            return View();
+        }
     }
 }
