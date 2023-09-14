@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+@model LoginViewModel
+
+@{
+	ViewData["Title"] = "Admin Login";
+	Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Document</title>
+	<link rel="stylesheet" href="~/css/adminLogin.css" />
+</head>
+<body>
+	<section class="main-cont">
+		<section class="main-inner-left">
+			<img alt="logo" src="~/assets/images/cpluslogo.svg">
+		</section>
+
+		<section class="main-inner-right">
+			<div class="log-cont">
+				<div class="lgn-title">
+					<h1>Admin Login</h1>
+				</div>
+
+				<form asp-controller="Account" asp-action="Login" method="post" enctype="multipart/form-data">
+					<div class="input-cont">
+						<p>Username</p>
+						<input asp-for="UserName" type="text">
+						<span asp-validation-for="UserName"></span>
+					</div>
+
+					<div class="input-cont">
+						<p>Password</p>
+						<input asp-for="Password" type="password">
+						<span asp-validation-for="Password"></span>
+					</div>
+
+					<div style="margin-top:60px;" class="input-cont">
+						<button type="submit">Log in</button>
+					</div>
+				</form>
+			</div>
+		</section>
+	</section>
+
+</body>
+</html>

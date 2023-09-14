@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.UI\\Cinema.UI.csproj": {}
+    "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.UI\\Cinema.UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Business\\Cinema.Business.csproj": {
+    "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Business\\Cinema.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Business\\Cinema.Business.csproj",
+        "projectUniqueName": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Business\\Cinema.Business.csproj",
         "projectName": "Cinema.Business",
-        "projectPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Business\\Cinema.Business.csproj",
+        "projectPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Business\\Cinema.Business.csproj",
         "packagesPath": "C:\\Users\\eliah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Business\\obj\\",
+        "outputPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Business\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eliah\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.DataAccess\\Cinema.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.DataAccess\\Cinema.DataAccess.csproj"
+              "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.DataAccess\\Cinema.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.DataAccess\\Cinema.DataAccess.csproj"
               },
-              "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj": {
-                "projectPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj"
+              "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj": {
+                "projectPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj"
               }
             }
           }
@@ -47,6 +47,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -87,14 +91,14 @@
         }
       }
     },
-    "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj": {
+    "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj",
+        "projectUniqueName": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj",
         "projectName": "Cinema.Core",
-        "projectPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj",
+        "projectPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj",
         "packagesPath": "C:\\Users\\eliah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Core\\obj\\",
+        "outputPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eliah\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -123,6 +127,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -163,14 +171,14 @@
         }
       }
     },
-    "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.DataAccess\\Cinema.DataAccess.csproj": {
+    "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.DataAccess\\Cinema.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.DataAccess\\Cinema.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.DataAccess\\Cinema.DataAccess.csproj",
         "projectName": "Cinema.DataAccess",
-        "projectPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.DataAccess\\Cinema.DataAccess.csproj",
+        "projectPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.DataAccess\\Cinema.DataAccess.csproj",
         "packagesPath": "C:\\Users\\eliah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eliah\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -187,11 +195,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj": {
-                "projectPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj"
+              "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj": {
+                "projectPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj"
               },
-              "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj": {
-                "projectPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj"
+              "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj": {
+                "projectPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj"
               }
             }
           }
@@ -206,6 +214,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -246,14 +258,14 @@
         }
       }
     },
-    "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj": {
+    "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj",
+        "projectUniqueName": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj",
         "projectName": "Cinema.Entities",
-        "projectPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj",
+        "projectPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj",
         "packagesPath": "C:\\Users\\eliah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Entities\\obj\\",
+        "outputPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eliah\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -270,8 +282,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj": {
-                "projectPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj"
+              "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj": {
+                "projectPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj"
               }
             }
           }
@@ -286,6 +298,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.0, )"
@@ -338,14 +354,14 @@
         }
       }
     },
-    "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.UI\\Cinema.UI.csproj": {
+    "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.UI\\Cinema.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.UI\\Cinema.UI.csproj",
+        "projectUniqueName": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.UI\\Cinema.UI.csproj",
         "projectName": "Cinema.UI",
-        "projectPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.UI\\Cinema.UI.csproj",
+        "projectPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.UI\\Cinema.UI.csproj",
         "packagesPath": "C:\\Users\\eliah\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.UI\\obj\\",
+        "outputPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.UI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\eliah\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -362,17 +378,17 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Business\\Cinema.Business.csproj": {
-                "projectPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Business\\Cinema.Business.csproj"
+              "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Business\\Cinema.Business.csproj": {
+                "projectPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Business\\Cinema.Business.csproj"
               },
-              "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj": {
-                "projectPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj"
+              "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj": {
+                "projectPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Core\\Cinema.Core.csproj"
               },
-              "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.DataAccess\\Cinema.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.DataAccess\\Cinema.DataAccess.csproj"
+              "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.DataAccess\\Cinema.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.DataAccess\\Cinema.DataAccess.csproj"
               },
-              "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj": {
-                "projectPath": "C:\\Users\\eliah\\Desktop\\Cinema\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj"
+              "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj": {
+                "projectPath": "C:\\Users\\eliah\\Desktop\\CinemaPlus\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj"
               }
             }
           }
@@ -387,6 +403,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.0, )"

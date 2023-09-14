@@ -1,5 +1,7 @@
 ﻿using Cinema.Entities.Helpers;
 using Cinema.Entities.Models;
+using Cinema.Entities.UserEntities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -10,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Cinema.Entities.Contexts
 {
-    public class CinemaDbContext:DbContext
+    public class CinemaDbContext:IdentityDbContext<CustomIdentityUser,CustomIdentityRole,string>
     {
 
         public CinemaDbContext()

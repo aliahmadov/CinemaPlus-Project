@@ -341,6 +341,7 @@ function closePlaces() {
     let placeContainer = document.getElementById("place-container");
     let layoutBody = document.getElementById("layout-body");
     layoutBody.style.overflow = "auto";
+    layoutBody.style.overflowX = "hidden";
     placeContainer.remove();
 }
 

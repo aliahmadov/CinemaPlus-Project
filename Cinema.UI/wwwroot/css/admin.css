@@ -1,0 +1,41 @@
+﻿
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+.header-cont {
+    display: flex;
+    justify-content: center;
+    background-color: #4193d2;
+    color: white;
+    padding: 40px;
+}
+
+
+
+.main-cont {
+    padding: 20px;
+    height: 85vh;
+    overflow: auto;
+}
+
+
+.movie-box {
+    border: 1px solid black;
+    display: flex;
+    padding:10px;
+}
+
+    .movie-box:hover {
+        background-color: #4193d2;
+        color: white;
+        transition: 0.7s;
+        cursor: pointer;
+    }
+
+
+    .movie-box > p {
+        font-size: 25px;
+    }

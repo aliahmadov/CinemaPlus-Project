@@ -1458,3 +1458,4 @@ C:\Users\eliah\Desktop\Cinema\CinemaPlus-Project\Cinema.UI\obj\Debug\net6.0\refi
 C:\Users\eliah\Desktop\Cinema\CinemaPlus-Project\Cinema.UI\obj\Debug\net6.0\Cinema.UI.pdb
 C:\Users\eliah\Desktop\Cinema\CinemaPlus-Project\Cinema.UI\obj\Debug\net6.0\Cinema.UI.genruntimeconfig.cache
 C:\Users\eliah\Desktop\Cinema\CinemaPlus-Project\Cinema.UI\obj\Debug\net6.0\ref\Cinema.UI.dll
+C:\Users\eliah\Desktop\CinemaPlus\CinemaPlus-Project\Cinema.UI\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

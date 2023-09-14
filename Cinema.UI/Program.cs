@@ -2,6 +2,8 @@ using Cinema.Business.Abstraction.Extensions;
 using Cinema.Business.Concrete;
 using Cinema.DataAccess.Abstract;
 using Cinema.DataAccess.Concrete.EFEntityFramework;
+using Cinema.Entities.Contexts;
+using Cinema.Entities.UserEntities;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Hosting;
@@ -10,6 +12,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<CinemaDbContext>(options =>
+{
+   
+});
 
 builder.Services.AddScoped<IExtendedHallService, HallService>();
 builder.Services.AddScoped<IExtendedLanguageService, LanguageService>();
@@ -32,6 +39,9 @@ builder.Services.AddScoped<ITheatreImageDal, EFTheatreImageDal>();
 builder.Services.AddScoped<ITheatreDal, EFTheatreDal>();
 builder.Services.AddScoped<ITicketDal, EFTicketDal>();
 
+builder.Services.AddIdentity<CustomIdentityUser, CustomIdentityRole>()
+    .AddEntityFrameworkStores<CinemaDbContext>()
+    .AddDefaultTokenProviders();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

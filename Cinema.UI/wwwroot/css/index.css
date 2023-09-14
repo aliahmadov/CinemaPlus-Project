@@ -33,7 +33,7 @@
 /*Place Container Start*/
 .place-container {
     width: 100%;
-    border: 1px solid red;
+    border: 5px solid red;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.607);
     z-index: 1000;
@@ -41,6 +41,7 @@
     padding: 20px;
     overflow: auto;
     display: flex;
+    height:85vh;
 }
 
 .place-inner-container {
