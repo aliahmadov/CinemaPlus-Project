@@ -24,8 +24,6 @@
 
         public const string GetSessionById = "GetSessionById/{id}";
 
-        public const string GetMovieSessions = "GetMovieSessions";  
-
-        public const string SearchMovies = "SearchMovies";
+        public const string GetMovieSessions = "GetMovieSessions";
     }
 }

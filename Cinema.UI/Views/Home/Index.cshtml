@@ -6,15 +6,15 @@
 
 <link rel="stylesheet" href="~/css/index.css" />
 <link rel="stylesheet" href="~/css/today.css" />
-<link rel="stylesheet" href="~/css/schedule.css" />
-<link rel="stylesheet" href="~/css/search.css"   />
+<link rel="stylesheet" href="~/css/schedule.css" /> 
 
-<div class="tabs filter" id="repertuar">
+
+<div class="tabs filter" id="repertuar" >
 
     <div class="tab_header">
         <a href="#" class="active" id="today_list" rel="today">TODAY</a>
         <a href="#" id="schedule_list" rel="schedule">SCHEDULE</a>
-        <a href="#" id="soon_list" rel="soon">SEARCH</a>
+        <a href="#" id="soon_list" rel="soon">SOON</a>
     </div>
 
     <div class="tab_body">
@@ -24,26 +24,26 @@
                     <select id="cinemaFilter" class="mobile_hide custom_select">
                         <option class="option" value="All Cinemas" disabled selected hidden>Cinema</option>
                         <option class="option" value="All Cinemas">All Cinemas</option>
-                    @if (Model.Theatres != null)
-                    {
-                        @foreach (var theatre in Model.Theatres)
+                        @if (Model.Theatres != null)
                         {
+                            @foreach (var theatre in Model.Theatres)
+                            {
                                 <option class="option" value="@theatre.Id">@theatre.Name</option>
+                            }
                         }
-                    }
                     </select>
                 </div>
                 <div class="mobile_hide">
                     <select id="languageFilter" class="mobile_hide custom_select">
                         <option value="All Languages" disabled selected hidden>Language</option>
                         <option value="All Languages">All Language</option>
-                    @if (Model.Languages != null)
-                    {
-                        @foreach (var language in Model.Languages)
+                        @if (Model.Languages != null)
                         {
+                            @foreach (var language in Model.Languages)
+                            {
                                 <option class="option" value="@language">@language</option>
+                            }
                         }
-                    }
                     </select>
                 </div>
                 <div class="movie_english mobile_hide">
@@ -60,6 +60,7 @@
                 </div>
 
                 <div id="movies">
+                   
                 </div>
             </div>
         </div>
@@ -78,45 +79,45 @@
                        date-text="Tomorrow">Tomorrow</a>
 
                     <select class="home_date_sessions">
-                    @if (Model.SessionDates != null)
-                    {
-                        foreach (var sessionDate in Model.SessionDates)
+                        @if (Model.SessionDates != null)
                         {
-                            var dateString = sessionDate.ToString("dd.MM.yyyy");
+                            foreach (var sessionDate in Model.SessionDates)
+                            {
+                                var dateString = sessionDate.ToString("dd.MM.yyyy");
                                 <option value="@dateString" data-value="@dateString">
-                                @dateString
+                                    @dateString
                                 </option>
+                            }
                         }
-                    }
                     </select>
                 </div>
                 <div class="mobile_hide">
                     <select id="sessionsCinemaFilter" class="mobile_hide custom_select">
                         <option class="option" value="All Cinemas" disabled selected hidden>Cinema</option>
                         <option class="option" value="All Cinemas">All Cinemas</option>
-                    @if (Model.Theatres != null)
-                    {
-                        @foreach (var theatre in Model.Theatres)
+                        @if (Model.Theatres != null)
                         {
+                            @foreach (var theatre in Model.Theatres)
+                            {
                                 <option class="option" value="@theatre.Id">@theatre.Name</option>
+                            }
                         }
-                    }
                     </select>
                 </div>
                 <div class="mobile_hide">
                     <select id="sessionsLanguageFilter" class="mobile_hide custom_select">
                         <option value="All Languages" disabled selected hidden>Language</option>
                         <option value="All Languages">All Language</option>
-                    @if (Model.Languages != null)
-                    {
-                        @foreach (var language in Model.Languages)
+                        @if (Model.Languages != null)
                         {
+                            @foreach (var language in Model.Languages)
+                            {
                                 <option class="option" value="@language">@language</option>
+                            }
                         }
-                    }
                     </select>
                 </div>
-            </div>
+                </div>
 
             <div id="sessions">
                 <div class="spinner-container" id="sessions-spinner">
@@ -138,29 +139,7 @@
             </div>
         </div>
 
-        <div class="tab soon_list" style="display: none; text-align: center; padding: 0px 0px 40px 0px;">
-            <div class="filter_block" style="padding: 10px !important;">
-                <form id="movie-search-form">
-                    <label>
-                        <input type="search" class="search-field" placeholder="Search for movie ..." value="" name="" title="" />
-                    </label>
-                    <input type="submit" class="search-submit button" value="&#xf002" />
-                </form>
-            </div>
-
-            <div class="spinner-container" id="movies-search-spinner">
-                <div class="spinner-border" role="status">
-                    <span class="sr-only"></span>
-                </div>
-            </div>
-
-            <div id="search-results">
-                <!-- Results will be displayed here -->
-                <img src="~/assets/images/movie_icon.png"/>
-                <h1>Search for Movies</h1>
-                <p>Enter a movie title or keyword in the search bar above to find movies.</p>
-            </div>
-        </div>
+        <div class="tab soon_list" style="display: none; text-align: center; padding: 40px 0px;">Soon</div>
     </div>
 </div>
 
@@ -168,4 +147,3 @@
 <script src="~/js/functions.js"></script>
 <script src="~/js/today.js"></script>
 <script src="~/js/schedule.js"></script>
-<script src="~/js/search.js"></script>  
