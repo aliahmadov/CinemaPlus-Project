@@ -33,6 +33,24 @@ namespace Cinema.Business.Concrete
             return await _movieDal.GetAsync(m => m.Id == id);
         }
 
+        public async Task<List<Movie>> SearchByTitleAsync(string title)
+        {
+            var movies = await _movieDal.GetListAsync(); 
+
+            if (movies == null || !movies.Any())
+            {
+                return new List<Movie>();
+            }
+
+            // Filter the movies based on the title
+            var matchingMovies = movies
+                .Where(movie => movie.Title.Contains(title, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+
+            return matchingMovies;
+        }
+
+
         public async Task UpdateAsync(Movie entity)
         {
             await _movieDal.UpdateAsync(entity);

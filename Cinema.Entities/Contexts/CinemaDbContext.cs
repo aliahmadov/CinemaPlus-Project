@@ -27,7 +27,7 @@ namespace Cinema.Entities.Contexts
         }
 
         /// <summary>
-        /// Overrides the default configuration of the DbContext options.
+            /// Overrides the default configuration of the DbContext options.
         /// Sets the database connection based on the appsettings.json file.
         /// </summary>
         /// <param name="optionsBuilder">The DbContext options builder.</param>
