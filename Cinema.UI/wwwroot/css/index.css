@@ -33,7 +33,6 @@
 /*Place Container Start*/
 .place-container {
     width: 100%;
-    border: 5px solid red;
     position: fixed;
     background-color: rgba(0, 0, 0, 0.607);
     z-index: 1000;
