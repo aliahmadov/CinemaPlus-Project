@@ -1,15 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Cinema.UI",
-    "\\Cinema.UI\\Controllers",
-    "\\Cinema.UI\\Controllers\\ApiControllers",
-    "\\Cinema.UI\\Views",
-    "\\Cinema.UI\\Views\\Home",
-    "\\Cinema.UI\\wwwroot",
-    "\\Cinema.UI\\wwwroot\\css",
-    "\\Cinema.UI\\wwwroot\\js"
+    ""
   ],
-  "SelectedNode": "\\Cinema.UI\\wwwroot\\js\\schedule.js",
+  "SelectedNode": "\\CinemaPlus.sln",
   "PreviewInSolutionExplorer": false
 }

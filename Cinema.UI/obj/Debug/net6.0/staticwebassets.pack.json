@@ -25,10 +25,6 @@
       "PackagePath": "staticwebassets\\assets\\images\\google.png"
     },
     {
-      "Id": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.UI\\wwwroot\\assets\\images\\movie_icon.png",
-      "PackagePath": "staticwebassets\\assets\\images\\movie_icon.png"
-    },
-    {
       "Id": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.UI\\wwwroot\\assets\\images\\places_icon.svg",
       "PackagePath": "staticwebassets\\assets\\images\\places_icon.svg"
     },
@@ -125,10 +121,6 @@
       "PackagePath": "staticwebassets\\css\\schedule.css"
     },
     {
-      "Id": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.UI\\wwwroot\\css\\search.css",
-      "PackagePath": "staticwebassets\\css\\search.css"
-    },
-    {
       "Id": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.UI\\wwwroot\\css\\services.css",
       "PackagePath": "staticwebassets\\css\\services.css"
     },
@@ -171,10 +163,6 @@
     {
       "Id": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.UI\\wwwroot\\js\\schedule.js",
       "PackagePath": "staticwebassets\\js\\schedule.js"
-    },
-    {
-      "Id": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.UI\\wwwroot\\js\\search.js",
-      "PackagePath": "staticwebassets\\js\\search.js"
     },
     {
       "Id": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.UI\\wwwroot\\js\\today.js",

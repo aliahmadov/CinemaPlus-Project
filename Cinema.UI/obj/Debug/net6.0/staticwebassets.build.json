@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5NhieUphVsmklD8iVeXFCRnH7mDsVj27EXF5IUv4bkU=",
+  "Hash": "ulE9OvDbDYyp2bfaI4pRosZbTeo12s9xOLP17npioPk=",
   "Source": "Cinema.UI",
   "BasePath": "_content/Cinema.UI",
   "Mode": "Default",
@@ -134,23 +134,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\google.png"
-    },
-    {
-      "Identity": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.UI\\wwwroot\\assets\\images\\movie_icon.png",
-      "SourceId": "Cinema.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.UI\\wwwroot\\",
-      "BasePath": "_content/Cinema.UI",
-      "RelativePath": "assets/images/movie_icon.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\images\\movie_icon.png"
     },
     {
       "Identity": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.UI\\wwwroot\\assets\\images\\places_icon.svg",
@@ -561,23 +544,6 @@
       "OriginalItemSpec": "wwwroot\\css\\schedule.css"
     },
     {
-      "Identity": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.UI\\wwwroot\\css\\search.css",
-      "SourceId": "Cinema.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.UI\\wwwroot\\",
-      "BasePath": "_content/Cinema.UI",
-      "RelativePath": "css/search.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\search.css"
-    },
-    {
       "Identity": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.UI\\wwwroot\\css\\services.css",
       "SourceId": "Cinema.UI",
       "SourceType": "Discovered",
@@ -763,23 +729,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\schedule.js"
-    },
-    {
-      "Identity": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.UI\\wwwroot\\js\\search.js",
-      "SourceId": "Cinema.UI",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.UI\\wwwroot\\",
-      "BasePath": "_content/Cinema.UI",
-      "RelativePath": "js/search.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\search.js"
     },
     {
       "Identity": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.UI\\wwwroot\\js\\today.js",
