@@ -1,5 +1,6 @@
 ﻿using Cinema.Business.Abstraction;
 using Cinema.Business.Abstraction.Extensions;
+using Cinema.Entities.Models;
 using Cinema.UI.Helpers.ConstantHelpers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -49,6 +50,25 @@ namespace Cinema.UI.Controllers.ApiControllers
             {
                 return BadRequest(ex.Message);
             }
+        }
+
+        [HttpGet(Routes.SearchByTitle)]
+        public async Task<List<Movie>> SearchByTitleAsync(string title)
+        {
+            var movies = await _movieService.GetAllAsync(); 
+
+            if (movies == null || !movies.Any())
+            {
+                // Handle the case where no movies are available (e.g., return an empty list or throw an exception)
+                return new List<Movie>();
+            }
+
+            // Filter the movies based on the title
+            var matchingMovies = movies
+                .Where(movie => movie.Title.Contains(title, StringComparison.OrdinalIgnoreCase))
+                .ToList();
+
+            return matchingMovies;
         }
     }
 }

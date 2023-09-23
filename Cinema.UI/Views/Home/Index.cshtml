@@ -6,15 +6,15 @@
 
 <link rel="stylesheet" href="~/css/index.css" />
 <link rel="stylesheet" href="~/css/today.css" />
-<link rel="stylesheet" href="~/css/schedule.css" /> 
+<link rel="stylesheet" href="~/css/schedule.css" />
+<link rel="stylesheet" href="~/css/search.css" />
 
-
-<div class="tabs filter" id="repertuar" >
+<div class="tabs filter" id="repertuar">
 
     <div class="tab_header">
         <a href="#" class="active" id="today_list" rel="today">TODAY</a>
         <a href="#" id="schedule_list" rel="schedule">SCHEDULE</a>
-        <a href="#" id="soon_list" rel="soon">SOON</a>
+        <a href="#" id="soon_list" rel="soon">SEARCH</a>
     </div>
 
     <div class="tab_body">
@@ -60,7 +60,6 @@
                 </div>
 
                 <div id="movies">
-                   
                 </div>
             </div>
         </div>
@@ -117,7 +116,7 @@
                         }
                     </select>
                 </div>
-                </div>
+            </div>
 
             <div id="sessions">
                 <div class="spinner-container" id="sessions-spinner">
@@ -139,11 +138,34 @@
             </div>
         </div>
 
-        <div class="tab soon_list" style="display: none; text-align: center; padding: 40px 0px;">Soon</div>
+        <div class="tab soon_list" style="display: none; text-align: center; padding: 0px 0px 40px 0px;">
+            <div class="filter_block" style="padding: 20px !important;">
+                <form id="movie-search-form">
+                    <label>
+                        <input type="search" class="search-field" id="movie-search-input" placeholder="Search for a movie ..." value="" name="" title="" />
+                    </label>
+                    <input type="submit" class="search-submit button" value="Search" />
+                </form>
+            </div>
+
+            <div id="default-view">
+                <img src="~/assets/images/movie_icon.png" alt="Movie Icon" />
+                <h1>Search for Movies</h1>
+                <p>Enter a movie title or keyword in the search bar above to find movies.</p>
+            </div>
+
+            <!-- Container to display search results -->
+            <div id="search-results">
+               
+                <!-- Results will be displayed here -->
+
+            </div>
+        </div>
     </div>
 </div>
 
 <script src="~/js/jquery.min.js"></script>
-<script src="~/js/functions.js"></script>
+<script src="~/js/functions.js"></script>  
 <script src="~/js/today.js"></script>
-<script src="~/js/schedule.js"></script>
+<script src="~/js/schedule.js"></script >
+<script src="~/js/search.js"></script>

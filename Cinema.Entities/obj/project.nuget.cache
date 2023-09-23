@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "53htFXJAh4UpUc3Wp6+hvlR2JyuPtrgSO4jFfWZaTuhiLqxTmrelF1goGFHozUgsdHKs+sK91rND5sIN7rAwdA==",
+  "dgSpecHash": "7tfAICzef3bDbl5BaZzyUP9IbCSacInt9SCirYTwhAPS2PcMl1Jog+5vX8Zei2kXAOfGW+pjCfv+f4o8b339tA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj",
+  "projectFilePath": "C:\\Users\\Ayxan\\Source\\Repos\\CinemaPlus-Project\\Cinema.Entities\\Cinema.Entities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ayxan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Ayxan\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
