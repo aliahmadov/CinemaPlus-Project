@@ -216,6 +216,8 @@ function getformattedDateTime(datetimeString) {
 
 }
 
+
+
 async function createPlaceHtml(sessionId) {
     let layoutBody = document.getElementById("layout-body");
     layoutBody.insertAdjacentHTML('afterbegin', `<div class="spinner-container middle-spinner" id="movies-spinner">

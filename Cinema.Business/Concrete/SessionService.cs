@@ -24,24 +24,19 @@ namespace Cinema.Business.Concrete
 
             if (sessions != null && sessions.Count() > 0)
             {
-                var oldestSession = sessions.OrderBy(s => s.StartTime).FirstOrDefault()!;
+                var firstAddedSession = sessions.OrderBy(s => s.StartTime).FirstOrDefault()!;
 
-                var firstAddedSessionDate = new DateTime(2023, 8, 23);
-
-                if (oldestSession.StartTime.Year == firstAddedSessionDate.Year &&
-                    oldestSession.StartTime.Month == firstAddedSessionDate.Month &&
-                    oldestSession.StartTime.Day == firstAddedSessionDate.Day)
+                if (firstAddedSession.StartTime < DateTime.Today)
                 {
-                    int dayDifference = (DateTime.Now - firstAddedSessionDate).Days;
-
                     foreach (var session in sessions)
                     {
-                        session.StartTime = session.StartTime.AddDays(dayDifference);
+                        int dayDifference = Math.Abs((session.StartTime - firstAddedSession.StartTime).Days);
+                        session.StartTime = DateTime.Today.AddDays(dayDifference);
                         await _sessionDal.UpdateAsync(session);
                     }
                 }
             }
-        }   
+        }
 
         public async Task DeleteAsync(Session entity)
         {

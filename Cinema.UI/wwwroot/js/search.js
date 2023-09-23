@@ -3,6 +3,8 @@ const form = document.getElementById('movie-search-form');
 
 // Add an event listener to the form's submit event
 form.addEventListener('submit', function (event) {
+    document.getElementById("search-spinner").style.display = 'block';
+
     // Prevent the default form submission behavior
     event.preventDefault();
 
@@ -30,6 +32,8 @@ form.addEventListener('submit', function (event) {
 
     // You can also clear the input field after submitting the search
     searchField.value = "";
+
+    document.getElementById("search-spinner").style.display = 'none';
 });
 
 var searchResultsDiv = document.getElementById("search-results");
