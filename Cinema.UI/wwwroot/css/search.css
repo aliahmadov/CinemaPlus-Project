@@ -110,7 +110,7 @@ input.search-submit {
 }
 
 #search-results {
-    padding: 20px;
+    padding: 20px !important;
     display: flex;
     justify-content: center;
     gap: 3%;

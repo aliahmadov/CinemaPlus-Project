@@ -179,11 +179,12 @@ a {
 
 
 .main-body {
-    display: flex;
-    width: 1600px;
-    margin: auto;
-    flex-direction: column;
-    align-items: center;
+    align-self: center !important;
+    margin: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
 }
 
 @media only screen and (max-width: 1600px) {
@@ -382,3 +383,4 @@ a {
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 9999; 
 }
+

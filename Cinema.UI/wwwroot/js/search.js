@@ -13,8 +13,10 @@ form.addEventListener('submit', function (event) {
     const searchQuery = searchField.value.trim();
 
     if (searchQuery === '') {
+        document.getElementById("search-spinner").style.display = 'none';
         return;
     }
+
 
     // Perform an AJAX request to search for movies by title
     $.ajax({
@@ -60,6 +62,8 @@ function displaySearchResults(results) {
 function addNoResultHtml() {
     searchResultsDiv.classList.add("no-result");
     searchResultsDiv.innerHTML = "No movies found matching the search criteria.";
+    searchResultsDiv.style.textAlign = "center";
+    searchResultsDiv.style.padding = "90px 10px";
 }
 
 function createFormatHtml(imageUrl, tooltip, check = true) {

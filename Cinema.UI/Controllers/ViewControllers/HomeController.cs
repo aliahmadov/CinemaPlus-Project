@@ -28,7 +28,7 @@ namespace Cinema.UI.Controllers.ViewControllers
 
         private readonly IExtendedSeatService _seatService;
 
-        public HomeController(IExtendedTheatreService theatreService, IExtendedLanguageService languageService, IExtendedSessionService sessionService, IExtendedMovieService movieService, IExtendedSubtitleService subtitleService, IExtendedHallService hallService)
+        public HomeController(IExtendedTheatreService theatreService, IExtendedLanguageService languageService, IExtendedSessionService sessionService, IExtendedMovieService movieService, IExtendedSubtitleService subtitleService, IExtendedHallService hallService, IExtendedSeatService seatService)
         {
             _theatreService = theatreService;
             _languageService = languageService;
@@ -36,6 +36,7 @@ namespace Cinema.UI.Controllers.ViewControllers
             _movieService = movieService;
             _subtitleService = subtitleService;
             _hallService = hallService;
+            _seatService = seatService;
         }
 
         public async Task<IActionResult> Index()
@@ -151,7 +152,7 @@ namespace Cinema.UI.Controllers.ViewControllers
             }
 
             var seats = await _seatService.GetSessionSeatsAsync(session.Id);
-
+            
             var vm = new SessionSeatsViewModel()
             {
                 Session = session,
@@ -184,6 +185,19 @@ namespace Cinema.UI.Controllers.ViewControllers
             return View();
         }
 
+        public IActionResult Campaigns()
+        {
+            return View();
+        }
 
+        public IActionResult Tariffs()
+        {
+            return View();
+        }
+
+        public IActionResult CineBonus()
+        {
+            return View();
+        }
     }
 }

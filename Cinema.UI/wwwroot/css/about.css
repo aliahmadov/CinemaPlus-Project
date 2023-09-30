@@ -3,10 +3,8 @@
 
 
 .about-container {
-    width: 100%;
     background-image: url("../assets/images/about.jpg");
     background-size: cover;
-    /* Cover the entire element */
     background-position: center;
     background-color: rgba(0, 0, 0, 0.607);
     background-blend-mode: overlay;

@@ -1,4 +1,5 @@
-﻿using Cinema.Business.Abstraction;
+﻿using AspNetCore;
+using Cinema.Business.Abstraction;
 using Cinema.Business.Abstraction.Extensions;
 using Cinema.Entities.Models;
 using Cinema.UI.Helpers.ConstantHelpers;
@@ -67,6 +68,12 @@ namespace Cinema.UI.Controllers.ApiControllers
             var matchingMovies = movies
                 .Where(movie => movie.Title.Contains(title, StringComparison.OrdinalIgnoreCase))
                 .ToList();
+
+            foreach (var movie in matchingMovies)
+            {
+                movie.Subtitles = (await _subtitleService.GetMovieSubtitlesAsync(movie.Id)).ToList();
+                movie.Languages = (await _languageService.GetMovieLanguagesAsync(movie.Id)).ToList();
+            }
 
             return matchingMovies;
         }

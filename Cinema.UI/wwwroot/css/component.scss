@@ -1,11 +1,11 @@
-$seat_width: 80px;
-$seats_row: 18;
-$rows: 18;
+$seat_width: 120px;
+$seats_row: 14;
+$rows: 14;
 $pers: 2000px;
 $row_up: 18px; // Y translate of row (staircaise structure)
 $row_back: 100px; // distance between rows
-$row_front_gap: 800px; // distance from screen
-$row_gap_amount: 2; // how many rows of gap between two blocks
+$row_front_gap: 12800px !global; // distance from screen
+$row_gap_amount: 4; // how many rows of gap between two blocks
 $side_margin: 4 * $seat_width;
 $cube_x: $seat_width * $seats_row + $row_gap_amount * $seat_width + $side_margin; /* two seats on each side for free space */
 $cube_y: 1000px;
@@ -21,7 +21,7 @@ $cube_z: 3000px;
 
 .cube {
 	position: absolute;
-	top: 50%;
+	top: 50%;	
 	left: 50%;
 	margin: (-$cube_y * 0.5) 0 0 (-$cube_x * 0.5);
 	width: $cube_x;
@@ -107,10 +107,6 @@ $cube_z: 3000px;
 	width: 100%;
 }
 
-.rows--mini .row:nth-child(9) {
-	margin: 0 0 15px 0;
-}
-
 .rows--large .row {
 	left: 0;
 	height: 100%;
@@ -127,8 +123,8 @@ $cube_z: 3000px;
 }
 
 .rows--mini .row__seat {
-	width: 10px;
-	height: 10px;
+	width: 15px;
+	height: 15px;
 	background: rgba(72, 72, 78, 0.5);
 	margin: 1px;
 	border-radius: 1px;
@@ -146,12 +142,8 @@ $cube_z: 3000px;
 
 .rows--large .row__seat {
 	width: $seat_width;
-	background: url(../img/seat.svg) no-repeat 50% 0;
+	background: url(/assets/images/seat.svg) no-repeat 50% 0;
 	background-size: 100%;
-}
-
-.rows--mini .row__seat:nth-child(9) {
-	margin-right: 15px;
 }
 
 .rows--large .row__seat:nth-child(9) {
@@ -288,6 +280,8 @@ $cube_z: 3000px;
 	z-index: 1000;
 	font-size: 14px;
 	padding: 8px 10px;
+	width: 50px !important;
+	text-align: center;
 	bottom: 100%;
 	box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
 	-webkit-transform: translate3d(-50%, -5px, 0);
@@ -375,7 +369,7 @@ $cube_z: 3000px;
 .intro__title {
 	padding: 0 0 0 3em;
 	margin: 0 0 0 0.75em;
-	background: url(../img/camera.svg) no-repeat 0% 50%;
+	background: url(/assets/images/camera.svg) no-repeat 0% 50%;
 	background-size: auto 70%;
 }
 
@@ -417,7 +411,7 @@ $cube_z: 3000px;
 	color: #21c252;
 	margin: 0 auto;
 	display: inline-block;
-	background: url(../img/seats.svg) no-repeat 0% 50%;
+	background: url(/assets/images/seats.svg) no-repeat 0% 50%;
 	background-size: auto 70%;
 }
 
@@ -433,7 +427,7 @@ $cube_z: 3000px;
 	opacity: 0;
 	-webkit-transform: translate3d(-50%, -50%, 0);
 	transform: translate3d(-50%, -50%, 0);
-	background: url(../img/play.svg) no-repeat 0% 50%;
+	background: url(/assets/images/play.svg) no-repeat 0% 50%;
 	background-size: auto 100%;
 	-webkit-transition: opacity 0.3s;
 	transition: opacity 0.3s;
@@ -451,15 +445,17 @@ $cube_z: 3000px;
 	opacity: 0;
 	-webkit-transform: translate3d(-50%, -50%, 0) translate3d(0, 10px, 0);
 	transform: translate3d(-50%, -50%, 0) translate3d(0, 10px, 0);
-	background: url(../img/lookaround.svg) no-repeat 50% 50%;
+	background: red !important;
 	background-size: auto 80%;
 	border-radius: 50%;
 	border: 4px solid transparent;
 	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
 	transition: opacity 0.3s, transform 0.3s;
+
 	&.action--disabled {
 		border-color: rgba(72, 72, 78, 0.5);
 	}
+
 	&.action--shown {
 		-webkit-transform: translate3d(-50%, -50%, 0);
 		transform: translate3d(-50%, -50%, 0);
