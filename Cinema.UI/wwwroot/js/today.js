@@ -331,7 +331,7 @@ async function addMoviesToView(movies) {
                     var html = createMovieHtml(movie);
                     fullHtml += html;
                 }
-                moviesContainer.innerHTML = fullHtml;
+                moviesContainer.innerHTML += fullHtml;
             }
             else {
                 var noResultHtml = getNoMovieResultHtml();
@@ -341,11 +341,28 @@ async function addMoviesToView(movies) {
     }
 }
 
+
+var moviesDisplayed = 0; // Keep track of the number of movies displayed
+const moviesPerPage = 12; // Number of movies to display per page
+
+async function fetchMoviesFromDatabase(start, end) {
+    try {
+        const response = await makeAjaxRequest(`/api/Movie/GetMoviesInRange?start=${start}&end=${end}`);
+        return response; 
+    } catch (error) {
+        console.error("Error fetching movies from the database:", error);
+        return [];
+    }
+}
+
+
+var allMovieCount = 0;
 async function initialize() {
     try {
-        ALL_MOVIES = await fetchMovies();
+        allMovieCount = await makeAjaxRequest("/api/Movie/GetMoviesCount");
+        moviesDisplayed = 0;
         showMoviesSpinner();
-        addMoviesToView(ALL_MOVIES);
+        await handleClick();
         hideMoviesSpinner();
     } catch (error) {
         console.error("Error initializing the app:", error);
@@ -354,3 +371,21 @@ async function initialize() {
 
 // Call the initializeApp function to start the application
 initialize();
+
+// Add an event listener to the "Load More" button
+document.getElementById("load-more-movies-button").addEventListener("click", handleClick);
+
+async function handleClick() {
+    const moviesChunk = await fetchMoviesFromDatabase(moviesDisplayed, moviesDisplayed + moviesPerPage);
+    console.log(moviesChunk);
+    if (moviesChunk.length > 0) {
+        addMoviesToView(moviesChunk);
+        moviesDisplayed += moviesChunk.length;
+
+        if (moviesDisplayed >= allMovieCount) {
+            document.getElementById("load-more-movies-button").style.display = "none";
+        }
+    } else {
+        document.getElementById("load-more-movies-button").style.display = "none";
+    }
+}

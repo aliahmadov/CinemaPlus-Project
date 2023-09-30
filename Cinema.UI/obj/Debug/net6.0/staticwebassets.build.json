@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "W5uzK/BsC6YK4Bj2tOERlDa1/x7UJdl5tFgd7+pdF2o=",
+  "Hash": "yNk3VvyvawMF02lJ40XgID8ssc7Z+66FB8tR8nJuyi0=",
   "Source": "Cinema.UI",
   "BasePath": "_content/Cinema.UI",
   "Mode": "Default",
@@ -151,6 +151,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\google.png"
+    },
+    {
+      "Identity": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project3\\Cinema.UI\\wwwroot\\assets\\images\\icons8-sync-100.png",
+      "SourceId": "Cinema.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project3\\Cinema.UI\\wwwroot\\",
+      "BasePath": "_content/Cinema.UI",
+      "RelativePath": "assets/images/icons8-sync-100.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\icons8-sync-100.png"
     },
     {
       "Identity": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project3\\Cinema.UI\\wwwroot\\assets\\images\\lookaround.svg",

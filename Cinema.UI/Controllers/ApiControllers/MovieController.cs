@@ -1,5 +1,4 @@
-﻿using AspNetCore;
-using Cinema.Business.Abstraction;
+﻿using Cinema.Business.Abstraction;
 using Cinema.Business.Abstraction.Extensions;
 using Cinema.Entities.Models;
 using Cinema.UI.Helpers.ConstantHelpers;
@@ -54,28 +53,78 @@ namespace Cinema.UI.Controllers.ApiControllers
         }
 
         [HttpGet(Routes.SearchByTitle)]
-        public async Task<List<Movie>> SearchByTitleAsync(string title)
+        public async Task<ActionResult<List<Movie>>> SearchByTitleAsync(string title)
         {
-            var movies = await _movieService.GetAllAsync(); 
 
-            if (movies == null || !movies.Any())
+            try
             {
-                // Handle the case where no movies are available (e.g., return an empty list or throw an exception)
-                return new List<Movie>();
+                var movies = await _movieService.GetAllAsync();
+
+                if (movies == null || !movies.Any())
+                {
+                    // Handle the case where no movies are available (e.g., return an empty list or throw an exception)
+                    return new List<Movie>();
+                }
+
+                // Filter the movies based on the title
+                var matchingMovies = movies
+                    .Where(movie => movie.Title.Contains(title, StringComparison.OrdinalIgnoreCase))
+                    .ToList();
+
+                foreach (var movie in matchingMovies)
+                {
+                    movie.Subtitles = (await _subtitleService.GetMovieSubtitlesAsync(movie.Id)).ToList();
+                    movie.Languages = (await _languageService.GetMovieLanguagesAsync(movie.Id)).ToList();
+                }
+
+                return matchingMovies;
             }
-
-            // Filter the movies based on the title
-            var matchingMovies = movies
-                .Where(movie => movie.Title.Contains(title, StringComparison.OrdinalIgnoreCase))
-                .ToList();
-
-            foreach (var movie in matchingMovies)
+            catch (Exception ex)
             {
-                movie.Subtitles = (await _subtitleService.GetMovieSubtitlesAsync(movie.Id)).ToList();
-                movie.Languages = (await _languageService.GetMovieLanguagesAsync(movie.Id)).ToList();
+                return BadRequest(ex.Message);
             }
+        }
 
-            return matchingMovies;
+        [HttpGet(Routes.GetMoviesInRange)]
+        public async Task<ActionResult<List<Movie>>> GetMoviesInRange(int start, int end)
+        {
+            try
+            {
+                var movies = await _movieService.GetMoviesInRange(start, end);
+
+                if (movies != null)
+                {
+                    movies.ForEach(async movie =>
+                    {
+                        movie.Languages = (await _languageService.GetMovieLanguagesAsync(movie.Id)).ToList();
+
+                        movie.Subtitles = (await _subtitleService.GetMovieSubtitlesAsync(movie.Id)).ToList();
+                    });
+
+                    return Ok(movies);
+                }
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet(Routes.GetMoviesCount)]
+        public async Task<ActionResult<int>> GetMoviesCount()
+        {
+            try
+            {
+                var movies = await _movieService.GetAllAsync();
+
+                return movies.Count();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
     }
 }

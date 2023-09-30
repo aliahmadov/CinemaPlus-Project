@@ -33,6 +33,12 @@ namespace Cinema.Business.Concrete
             return await _movieDal.GetAsync(m => m.Id == id);
         }
 
+        public async Task<List<Movie>> GetMoviesInRange(int start, int end)
+        {
+            var range = new Range(start, end);
+            return (await _movieDal.GetListAsync()).Take(range).ToList();
+        }
+
         public async Task UpdateAsync(Movie entity)
         {
             await _movieDal.UpdateAsync(entity);

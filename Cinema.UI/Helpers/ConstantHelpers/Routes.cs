@@ -27,5 +27,9 @@
         public const string GetMovieSessions = "GetMovieSessions";
 
         public const string SearchByTitle = "SearchByTitle";
+
+        public const string GetMoviesInRange = "GetMoviesInRange";
+
+        public const string GetMoviesCount = "GetMoviesCount";
     }
 }

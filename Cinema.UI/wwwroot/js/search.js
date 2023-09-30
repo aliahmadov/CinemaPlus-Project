@@ -63,7 +63,7 @@ function addNoResultHtml() {
     searchResultsDiv.classList.add("no-result");
     searchResultsDiv.innerHTML = "No movies found matching the search criteria.";
     searchResultsDiv.style.textAlign = "center";
-    searchResultsDiv.style.padding = "90px 10px";
+    searchResultsDiv.style.padding = "130px 10px";
 }
 
 function createFormatHtml(imageUrl, tooltip, check = true) {

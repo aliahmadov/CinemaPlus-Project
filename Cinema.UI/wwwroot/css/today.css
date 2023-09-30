@@ -331,3 +331,18 @@ select option {
 }
 
 /* Media Queries End */
+
+
+#load-more-movies-button{
+    background: white;
+    outline: none !important;
+    margin: auto;
+    border: 1px solid gray;
+    padding: 5px;
+    margin: 10px 10px 30px 10px;
+}
+
+#load-more-movies-button img {
+    width: 30px;
+    height: 30px;
+}
