@@ -216,15 +216,15 @@ function getformattedDateTime(datetimeString) {
 
 }
 
-
-
 async function createPlaceHtml(sessionId) {
-    let layoutBody = document.getElementById("layout-body");
+    document.getElementById("layout-body").style.overflow = 'hidden';
+
+    let layoutBody = document.getElementById("fullscreen-overlay");
     layoutBody.insertAdjacentHTML('afterbegin', `<div class="spinner-container middle-spinner" id="movies-spinner">
                     <div class="spinner-border" role="status">
-                        <span class="sr-only"></span>
-                    </div>
-                    <h4>Opening Places</h4>
+                            <span class="sr-only"></span>
+                        </div>
+                    <h4 style='color: white !important;'>Opening Places</h4>
                 </div>`);
     let session = await makeAjaxRequest(`/api/Session/GetSessionById/${sessionId}`);
     let spinner = document.getElementById("movies-spinner");
@@ -309,7 +309,9 @@ async function createPlaceHtml(sessionId) {
 
 				<div class="place-inner-down-sec">
 					<div class="place-inner-down-bottom">
-
+                    <a class="confirm-btn" onclick="show3DimensionalView('${session.id}')">
+							3D View
+						</a>
 					</div>
 					<div class="place-inner-down-bottom" style="flex-direction:column;">
 						<b style="color:#00b0f0">Total Price:</b>
@@ -325,14 +327,19 @@ async function createPlaceHtml(sessionId) {
 			</div>
 		</div>`;
     layoutBody.insertAdjacentHTML('afterbegin', content);
-    layoutBody.style.overflow = "hidden";
+    //layoutBody.style.overflow = "hidden";
+}
+
+function show3DimensionalView(sessionId) {
+    window.location.href = `/home/seats?id=${sessionId}`;
 }
 
 function showPlaces(sessionId) {
     createPlaceHtml(sessionId);
-    let placeContainer = document.getElementById("place-container");
 
-    
+    // Show the full-screen overlay
+    const fullscreenOverlay = document.getElementById("fullscreen-overlay");
+    fullscreenOverlay.style.display = "block";
 }
 
 var totalPrice = 0;
@@ -343,8 +350,13 @@ function closePlaces() {
     layoutBody.style.overflow = "auto";
     layoutBody.style.overflowX = "hidden";
     placeContainer.remove();
-}
 
+    // Hide the full-screen overlay
+    const fullscreenOverlay = document.getElementById("fullscreen-overlay");
+    fullscreenOverlay.style.display = "none";
+
+    document.getElementById("layout-body").style.overflow = 'visible';
+}
 
 function selectSeat(price, seatId) {
     let seatEl = document.getElementById(`seat-${seatId}`);

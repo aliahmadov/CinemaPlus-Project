@@ -6648,3 +6648,8 @@ tbody td {
     opacity: 0 !important;
     pointer-events: none !important;
 }
+
+
+#place-container {
+    height: 100%;
+}

@@ -33,7 +33,12 @@ namespace Cinema.Business.Concrete
             return await _seatDal.GetAsync(s => s.Id == id);
         }
 
-        public async Task UpdateAsync(Seat entity)
+		public async Task<IEnumerable<Seat>> GetSessionSeatsAsync(string sessionId)
+		{
+            return await _seatDal.GetListAsync(s => s.SessionId == sessionId);
+		}
+
+		public async Task UpdateAsync(Seat entity)
         {
             await _seatDal.UpdateAsync(entity);
         }

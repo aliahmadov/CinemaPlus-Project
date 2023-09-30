@@ -1,5 +1,6 @@
 ﻿using Cinema.Business.Abstraction.Extensions;
 using Cinema.Entities.Helpers;
+using Cinema.Entities.Models;
 using Cinema.UI.Extensions;
 using Cinema.UI.Helpers.ConstantHelpers;
 using Cinema.UI.Models;
@@ -24,6 +25,8 @@ namespace Cinema.UI.Controllers.ViewControllers
         private readonly IExtendedSubtitleService _subtitleService;
 
         private readonly IExtendedHallService _hallService;
+
+        private readonly IExtendedSeatService _seatService;
 
         public HomeController(IExtendedTheatreService theatreService, IExtendedLanguageService languageService, IExtendedSessionService sessionService, IExtendedMovieService movieService, IExtendedSubtitleService subtitleService, IExtendedHallService hallService)
         {
@@ -128,6 +131,35 @@ namespace Cinema.UI.Controllers.ViewControllers
             return View(ApplicationConstants.MovieView, viewModel);
         }
 
+        public async Task<IActionResult> Seats(string id = ApplicationConstants.StringEmpty)
+        {
+            if (id == ApplicationConstants.StringEmpty) { return NotFound(); }
+
+            var session = await _sessionService.GetByIdAsync(id);
+
+            if (session == null)
+            {
+                return NotFound();
+            }
+
+			session.Movie = await _movieService.GetByIdAsync(session.MovieId);
+
+            if (session.Movie.TrailerUrl != null && session.Movie.TrailerUrl.Contains(ApplicationConstants.WatchQueryString))
+            {
+                // Replace the string with the constant
+                session.Movie.TrailerUrl = session.Movie.TrailerUrl.Replace(ApplicationConstants.WatchQueryString, ApplicationConstants.EmbedString);
+            }
+
+            var seats = await _seatService.GetSessionSeatsAsync(session.Id);
+
+            var vm = new SessionSeatsViewModel()
+            {
+                Session = session,
+                Seats = seats.ToList()
+            };
+            return View(vm);
+        }
+
         public IActionResult Platinum()
         {
             return View();
@@ -152,6 +184,6 @@ namespace Cinema.UI.Controllers.ViewControllers
             return View();
         }
 
-     
+
     }
 }

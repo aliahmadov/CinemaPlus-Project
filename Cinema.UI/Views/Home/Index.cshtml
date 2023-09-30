@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="~/css/schedule.css" />
 <link rel="stylesheet" href="~/css/search.css" />
 
+
 <div class="tabs filter" id="repertuar">
 
     <div class="tab_header">
@@ -79,7 +80,7 @@
 
                     <select class="home_date_sessions">
                         @if (Model.SessionDates != null)
-                        {
+                        {   
                             foreach (var sessionDate in Model.SessionDates)
                             {
                                 var dateString = sessionDate.ToString("dd.MM.yyyy");
