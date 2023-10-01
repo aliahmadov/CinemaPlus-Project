@@ -158,7 +158,7 @@ function createSessionsRowHtml(session, maxFormatCount) {
         movie = MOVIES.find((m) => m.id === session?.movieId);
 
         const selectedLanguage = movie.languages.find(function (language) {
-            return language.name === selectedSessionLanguage;   
+            return language.name === selectedSessionLanguage;
         });
 
         if (selectedLanguage) {
@@ -319,15 +319,80 @@ async function createPlaceHtml(sessionId) {
 					</div>
 
 					<div class="place-inner-down-bottom">
-						<a class="confirm-btn">
-							Confirm
-						</a>
+						<a class="confirm-btn" id="confirm-button" onclick="handleConfirmClick()">
+                          Confirm
+                        </a>
 					</div>
 				</div>
 			</div>
 		</div>`;
     layoutBody.insertAdjacentHTML('afterbegin', content);
     //layoutBody.style.overflow = "hidden";
+}
+
+function handleConfirmClick() {
+    if (selectedSeatCount <= 0) {
+        alert("Select At Least 1 Seat!");
+        return;
+    }
+    else {
+        document.getElementById("layout-body").style.overflow = 'hidden';
+
+        let layoutBody = document.getElementById("fullscreen-overlay");
+        layoutBody.style.display = 'flex';
+        layoutBody.style.justifyContent = 'center';
+        layoutBody.style.alignItems = 'center';
+
+        let content = '';
+
+        content += `
+                    <form style="width: 350px; background: white; padding: 20px; border: 1px solid black; border-radius: 10px;">
+						<div style="display: flex; justify-content: space-between;">
+                            <h5>Order</h5>
+                            <a style="border: 1px solid black; border-radius: 50%; width: 30px; height: 30px; padding-left: 8px;" href="/home/">x</a>
+                        </div>
+                        <div class="order_email">
+                            <label for="order_email">E-mail</label>
+                            <input id="order_email" type="email">
+                        </div>
+                            <label for="mob_prefix">Phone Number</label>
+                        <div class="order_phone" style="height: 40px; ">
+                            <input id="mob_prefix" type="text" value="+994" disabled="">
+                            <input type="text" id="mob_num" maxlength="7" style="width: 215px;margin-right: 0;">
+                            <div class="clr"></div>
+                        </div>
+                        <div>
+                            <label>Payment</label>
+                        </div>
+                        <div class="order_payment">
+                            <select name="payment_method">
+                                <option value="card">With Bank Card</option>
+                                <option value="cineclub">With CineClub Card</option>
+                            </select>
+                        </div>
+                        <div class="order_payment_card_mc">
+                            <label for="op_card_pan_mc">Digits Of Card</label>
+                            <input id="op_card_pan_mc" type="text" maxlength="6">
+                        </div>
+                        <div class="order_payment_card">
+                            <input id="op_card_pan" type="text" maxlength="6">
+                        </div>
+                        <div class="rules">
+                            <input type="checkbox" required>
+                            <label>I accept the rules</label>
+                        </div>
+                        <div style="display: flex; justify-content: center;">
+                           <input onclick='pay()' type="submit" value="Pay" style="width: 100%; border-radius: 6px; padding: 2px; outline: none;">
+                        </div>
+                    </form>
+        `;
+        layoutBody.innerHTML = content;
+    }
+}
+
+function pay() {
+    alert("Tickets were successfully bought!");
+    window.location.href = `/home`;
 }
 
 function show3DimensionalView(sessionId) {
@@ -358,6 +423,7 @@ function closePlaces() {
     document.getElementById("layout-body").style.overflow = 'visible';
 }
 
+var selectedSeatCount = 0;
 function selectSeat(price, seatId) {
     let seatEl = document.getElementById(`seat-${seatId}`);
     let priceDisplay = document.getElementById("price-display");
@@ -367,21 +433,23 @@ function selectSeat(price, seatId) {
             seatEl.style.color = "white";
             totalPrice += Number(price);
             priceDisplay.innerHTML = `${totalPrice} AZN`;
+            selectedSeatCount++;
         }
         else if (seatEl.style.backgroundColor == "rgb(0, 175, 240)") {
             seatEl.style.backgroundColor = "white";
             seatEl.style.color = "black";
             totalPrice -= Number(price);
             priceDisplay.innerHTML = `${totalPrice} AZN`;
-
+            selectedSeatCount--;
         }
+        console.log(selectedSeatCount);
+
     }
     //console.log(sessionData);
-
 }
 
 const MAX_SESSION_FORMAT_COUNT = 3;
-    
+
 function areDatesOnSameDay(date1, date2) {
     // Compare year, month, and day components
     return (

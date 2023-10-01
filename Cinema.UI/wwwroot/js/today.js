@@ -112,6 +112,7 @@ var languageSelectElement = document.getElementById("languageFilter");
 async function handleChange() {
     clearMoviesContainer(); 
     showMoviesSpinner();
+    document.getElementById("load-more-movies-button").style.display = 'none';
 
     // Get the selected option's value
     var selectedCinema = cinemaSelectElement.value;
@@ -355,11 +356,13 @@ async function fetchMoviesFromDatabase(start, end) {
     }
 }
 
+var ALL_MOVIES = [];
 
 var allMovieCount = 0;
 async function initialize() {
     try {
-        allMovieCount = await makeAjaxRequest("/api/Movie/GetMoviesCount");
+        ALL_MOVIES = await makeAjaxRequest("/api/Movie/GetAllMovies");
+        allMovieCount = ALL_MOVIES.length;
         moviesDisplayed = 0;
         showMoviesSpinner();
         await handleClick();
@@ -374,6 +377,7 @@ initialize();
 
 // Add an event listener to the "Load More" button
 document.getElementById("load-more-movies-button").addEventListener("click", handleClick);
+
 
 async function handleClick() {
     const moviesChunk = await fetchMoviesFromDatabase(moviesDisplayed, moviesDisplayed + moviesPerPage);

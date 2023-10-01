@@ -8,6 +8,7 @@ using CinemaPlusMovieDetails.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using System.Linq;
 using System.Runtime.InteropServices;
 
 namespace Cinema.UI.Controllers.ViewControllers
@@ -58,6 +59,7 @@ namespace Cinema.UI.Controllers.ViewControllers
                  .OrderBy(s => s.Day)
                  .ToList()
             };
+
             return View(viewModel);
         }
 

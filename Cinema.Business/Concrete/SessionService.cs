@@ -28,10 +28,10 @@ namespace Cinema.Business.Concrete
 
                 if (firstAddedSession.StartTime < DateTime.Today)
                 {
+                    int dayDifference = Math.Abs((firstAddedSession.StartTime - DateTime.Now).Days);
                     foreach (var session in sessions)
                     {
-                        int dayDifference = Math.Abs((session.StartTime - firstAddedSession.StartTime).Days);
-                        session.StartTime = DateTime.Today.AddDays(dayDifference);
+                        session.StartTime = session.StartTime.AddDays(dayDifference);
                         await _sessionDal.UpdateAsync(session);
                     }
                 }

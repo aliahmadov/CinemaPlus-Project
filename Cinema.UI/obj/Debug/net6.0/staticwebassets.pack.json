@@ -161,6 +161,10 @@
       "PackagePath": "staticwebassets\\css\\normalize.css"
     },
     {
+      "Id": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project3\\Cinema.UI\\wwwroot\\css\\order.css",
+      "PackagePath": "staticwebassets\\css\\order.css"
+    },
+    {
       "Id": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project3\\Cinema.UI\\wwwroot\\css\\platinum.css",
       "PackagePath": "staticwebassets\\css\\platinum.css"
     },

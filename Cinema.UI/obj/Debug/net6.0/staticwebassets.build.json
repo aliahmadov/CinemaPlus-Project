@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yNk3VvyvawMF02lJ40XgID8ssc7Z+66FB8tR8nJuyi0=",
+  "Hash": "vAkwboDaIAZdo+vWdpbrQYdoc+4dSE01VZ7zuFzb8uY=",
   "Source": "Cinema.UI",
   "BasePath": "_content/Cinema.UI",
   "Mode": "Default",
@@ -712,6 +712,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\normalize.css"
+    },
+    {
+      "Identity": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project3\\Cinema.UI\\wwwroot\\css\\order.css",
+      "SourceId": "Cinema.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project3\\Cinema.UI\\wwwroot\\",
+      "BasePath": "_content/Cinema.UI",
+      "RelativePath": "css/order.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\order.css"
     },
     {
       "Identity": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project3\\Cinema.UI\\wwwroot\\css\\platinum.css",
