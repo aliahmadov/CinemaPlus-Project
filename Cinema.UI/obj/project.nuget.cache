@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hIf1CTUWv6wcNgZh5Ggu7iNBrKBhm1rh0vlMsN6FwppCbQ8vwdZC+B8ZaG/YMQmw7Vw0tMRPLekTkwVkKut8lw==",
+  "dgSpecHash": "wwolDfs4glGfBiL6efm1699zhKsW6of3Qu7yUdLSxPbKIIWnwwOnmQ2fasEON6SuA+Q3Hw8hksnMtAIYOHsdeg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ayxan\\source\\repos\\CinemaPlus-Project3\\Cinema.UI\\Cinema.UI.csproj",
+  "projectFilePath": "C:\\Users\\Ayxan\\Source\\Repos\\CinemaPlus-Project\\Cinema.UI\\Cinema.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ayxan\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Ayxan\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
